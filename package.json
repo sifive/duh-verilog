@@ -1,0 +1,37 @@
+{
+  "name": "duh-verilog",
+  "version": "0.1.0",
+  "description": "Verilog import / export package",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint lib && mocha test",
+    "cover": "nyc -r=text -r=lcov mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sifive/duh-verilog.git"
+  },
+  "keywords": [],
+  "author": "SiFive",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sifive/duh-verilog/issues"
+  },
+  "homepage": "https://github.com/sifive/duh-verilog#readme",
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint4/node8"
+  },
+  "dependencies": {
+    "duh-core": "^0.6.0"
+  },
+  "devDependencies": {
+    "@drom/eslint-config": "^0.10.0",
+    "@sifive/block-ark": "github:sifive/block-ark",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "json-refs": "^3.0.13",
+    "json5": "^2.1.1",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1"
+  }
+}
