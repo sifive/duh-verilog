@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/sifive/duh-verilog.git"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [],
   "author": "SiFive",
   "license": "Apache-2.0",
