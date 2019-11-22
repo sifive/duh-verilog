@@ -8,7 +8,25 @@ const expect = chai.expect;
 const generate = lib.generate;
 
 describe('basic', () => {
+
   it('b1', done => {
+    expect(generate({
+      component: {
+        name: 'simple',
+        model: {ports: {clock: 1, reset_n: 1, irq: -1}}
+      }
+})).to.eq(`\
+module simple (
+  input                                      clock,
+  input                                      reset_n,
+  output logic                               irq
+);
+endmodule
+`);
+    done();
+  });
+
+  it('b2', done => {
     expect(generate({
       component: {
         name: 'simple',
@@ -31,6 +49,7 @@ endmodule
 `);
     done();
   });
+
 });
 
 /* eslint-env mocha */
