@@ -4,8 +4,7 @@
   "description": "Verilog import / export package",
   "main": "index.js",
   "scripts": {
-    "test": "eslint lib && mocha test",
-    "cover": "nyc -r=text -r=lcov mocha test"
+    "test": "eslint lib && nyc -r=text -r=lcov mocha"
   },
   "repository": {
     "type": "git",
