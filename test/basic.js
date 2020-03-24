@@ -9,7 +9,18 @@ const generate = lib.generate;
 
 describe('basic', () => {
 
-  it('b1', done => {
+  it('noname', async () => {
+    expect(generate({
+      component: {}
+})).to.eq(`\
+module noname (
+
+);
+endmodule
+`);
+  });
+
+  it('b1', async () => {
     expect(generate({
       component: {
         name: 'simple',
@@ -23,10 +34,9 @@ module simple (
 );
 endmodule
 `);
-    done();
   });
 
-  it('b2', done => {
+  it('b2', async () => {
     expect(generate({
       component: {
         name: 'simple',
@@ -47,7 +57,6 @@ module simple (
 );
 endmodule
 `);
-    done();
   });
 
 });
