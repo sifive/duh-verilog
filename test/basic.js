@@ -12,7 +12,7 @@ describe('basic', () => {
   it('noname', async () => {
     expect(generate({
       component: {}
-})).to.eq(`\
+    })).to.eq(`\
 module noname (
 
 );
@@ -26,7 +26,7 @@ endmodule // noname
         name: 'b1',
         model: {ports: {clock: 1, reset_n: 1, irq: -1}}
       }
-})).to.eq(`\
+    })).to.eq(`\
 module b1 (
   input   clock,
   input   reset_n,
@@ -47,7 +47,7 @@ endmodule // b1
           }
         }
       }
-})).to.eq(`\
+    })).to.eq(`\
 module bar (
   input                 clock,
   input                 reset_n,
