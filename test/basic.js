@@ -64,7 +64,7 @@ endmodule // bar
       component: {
         name: 'b3',
         model: {ports: {
-          clk: 1, wren: 1, rden: 1, addr: 16, wrdata: 'dataWidth', rddata: '-dataWidth'
+          clk: 1, reset_n: 1, wren: 1, rden: 1, addr: 16, wrdata: 'dataWidth', rddata: '-dataWidth'
         }},
         busInterfaces: [{
           name: 't',
@@ -77,17 +77,25 @@ endmodule // bar
               WRDATA: 'wrdata', RDDATA: 'rddata'
             }
           }]
-        }],
-        props: {}
+        }, {
+          name: 'c',
+          interfaceMode: 'slave',
+          busType: {vendor: 'sifive.com', library: 'PRCI', name: 'CLOCK', version: '0.1.0'},
+          abstractionTypes: [{
+            viewRef: 'RTLview',
+            portMaps: {CLOCK: 'clk'}
+          }]
+        }]
       }
     })).to.eq(`\
 module b3 (
-  input                  clk    /* t:CLK */,
-  input                  wren   /* t:WREN */,
-  input                  rden   /* t:RDEN */,
-  input           [15:0] addr   /* t:ADDR */,
-  input  [dataWidth-1:0] wrdata /* t:WRDATA */,
-  output [dataWidth-1:0] rddata /* t:RDDATA */
+  input                  clk     /* t:CLK, c:CLOCK */,
+  input                  reset_n,
+  input                  wren    /* t:WREN */,
+  input                  rden    /* t:RDEN */,
+  input           [15:0] addr    /* t:ADDR */,
+  input  [dataWidth-1:0] wrdata  /* t:WRDATA */,
+  output [dataWidth-1:0] rddata  /* t:RDDATA */
 );
 endmodule // b3
 `);
