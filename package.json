@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Verilog import / export package",
   "main": "index.js",
+  "bin": {
+    "duh-verilog": "bin/duh-verilog.js"
+  },
   "scripts": {
     "test": "eslint lib && nyc -r=text -r=lcov mocha"
   },
