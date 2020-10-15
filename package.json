@@ -2,7 +2,7 @@
   "name": "duh-verilog",
   "version": "0.2.0",
   "description": "Verilog import / export package",
-  "main": "index.js",
+  "main": "lib",
   "bin": {
     "duh-verilog": "bin/duh-verilog.js"
   },
@@ -27,7 +27,8 @@
     "extends": "@drom/eslint-config/eslint4/node8"
   },
   "dependencies": {
-    "duh-core": "^0.11.1",
+    "duh-bus": "^0.10.0",
+    "duh-core": "^0.13.0",
     "immutability-helper": "^3.1.1",
     "lodash.get": "^4.4.2"
   },

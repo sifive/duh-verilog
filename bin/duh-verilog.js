@@ -35,6 +35,7 @@ const genCatalog = (duh, top) => {
   if (top === undefined) {
     tops = [];
   } else {
+    console.log(argv.top);
     tops = json5.parse(argv.top);
   }
   console.log(duh, tops);
@@ -43,11 +44,12 @@ const genCatalog = (duh, top) => {
 async function main(argv) {
   const duh = await readDuh({filename: argv.input});
   await validateSchema(duh);
-
-  if (duh.component !== undefined) { return genComponent(duh); }
-
-  if (duh.catalog !== undefined) { return genCatalog(duh, argv.top); }
-
+  if (duh.component !== undefined) {
+    return genComponent(duh);
+  }
+  if (duh.catalog !== undefined) {
+    return genCatalog(duh, argv.top);
+  }
   console.log(duh);
 }
 
