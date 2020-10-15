@@ -1,6 +1,6 @@
 {
   "name": "duh-verilog",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Verilog import / export package",
   "main": "lib",
   "bin": {
