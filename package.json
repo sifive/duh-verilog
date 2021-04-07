@@ -36,10 +36,10 @@
     "@drom/eslint-config": "^0.10.0",
     "@sifive/block-ark": "github:sifive/block-ark",
     "chai": "^4.2.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.23.0",
     "json-refs": "^3.0.15",
     "json5": "^2.1.3",
-    "mocha": "^7.2.0",
+    "mocha": "^8.3.2",
     "nyc": "^15.1.0"
   }
 }
