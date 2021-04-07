@@ -11,7 +11,7 @@ const data = {
   noname: {
     source: {component: {}},
     result: `\
-module noname (
+module noname  (
 
 );
 // noname
@@ -25,7 +25,7 @@ endmodule // noname
       }}
     }},
     result: `\
-module b1 (
+module b1  (
   input   clock,
   input   reset_n,
   output  irq
@@ -41,7 +41,7 @@ endmodule // b1
       }}
     }},
     result: `\
-module bar (
+module bar  (
   input                 clock,
   input                 reset_n,
   input                 t_req,
@@ -75,7 +75,7 @@ endmodule // bar
       }]
     }},
     result: `\
-module b3 (
+module b3  (
   input                  clk     /* t:CLK, c:CLOCK */,
   input                  reset_n,
   input                  wren    /* t:WREN */,
